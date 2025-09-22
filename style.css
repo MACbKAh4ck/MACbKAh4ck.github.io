@@ -1,0 +1,98 @@
+/* Сбрасываем стандартные отступы и задаем шрифт */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Можно подключить красивый шрифт с Google Fonts */
+}
+
+body {
+    /* Вот тот самый переливающийся градиент */
+    background: linear-gradient(-45deg, #6a11cb, #2575fc, #4cc9f0, #8a2be2);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    /* Выравниваем все по центру */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Анимация для плавного движения градиента */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15); /* Полупрозрачный белый фон для карточки */
+    backdrop-filter: blur(10px); /* Размытие фона за карточкой (современный эффект стекла) */
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступ между кнопками */
+}
+
+.link-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px; /* Закругленные кнопки */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Отступ между иконкой и текстом */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.link-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px); /* Эффект поднятия кнопки */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
